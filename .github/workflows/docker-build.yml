@@ -1,0 +1,13 @@
+name: Build website image
+
+on: [push, pull_request]
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Build Docker image
+        run: docker build -t devops-website .
