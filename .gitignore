@@ -1,0 +1,15 @@
+# Terraform state and local files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+
+# Secrets and private keys
+.env
+*.pem
+
+# Operating system files
+.DS_Store
+Thumbs.db
