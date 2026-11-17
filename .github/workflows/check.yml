@@ -1,0 +1,13 @@
+name: Check project scripts
+
+on: [push, pull_request]
+
+jobs:
+  shell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Check Bash syntax
+        run: bash -n health-check.sh backup.sh
